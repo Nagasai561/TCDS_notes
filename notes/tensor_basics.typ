@@ -146,7 +146,7 @@ $
 
 The *t-product* defines multiplication between tensors via block circulant operators.
 
-=== Circulant matrix
+#text(fill: red)[ === Circulant matrix]
 
 Let $arrow(v) = (v_1, v_2, v_3)^T$ be a vector.
 
@@ -168,7 +168,7 @@ $
 Each row is a circular shift of the previous row, and all diagonal entries are $v_1$.
 
 
-=== Block circulant operator
+#text(fill: red)[ === Block circulant operator]
 
 For a tensor $cal(A)$, the *block circulant matrix* is defined as
 
@@ -183,7 +183,7 @@ $
 
 The result is a block circulant matrix whose blocks correspond to the frontal slices of $cal(A)$.
 
-=== Example: Block circulant structure
+#text(fill: green)[ === Example: Block circulant structure]
 
 Let
 $
@@ -202,7 +202,7 @@ $
 
 #line()
 
-=== Definition of the t-product
+#text(fill: red)[=== Definition of the t-product]
 
 Let
 $
@@ -232,7 +232,7 @@ $
 
 #line()
 
-=== Example: T-product computation
+#text(fill: green)[=== Example: T-product computation]
 
 Let
 $
