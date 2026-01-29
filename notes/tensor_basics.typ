@@ -1,18 +1,10 @@
-#set text(
-	size: 15pt
-)
+#import "../template.typ": apply-settings
+#show: apply-settings
 
-#set line(
-	length: 100%,
-	stroke: stroke(color.green) 
-)
-
-// Content
-
-
-#align(center)[= Tensor Basics (#link("https://www.kolda.net/publication/TensorReview.pdf", [_ref_]))]
+#align(center)[#title[Tensor basics]]
 
 == Terminology
+
 / Fiber: Anagloue of row/column of a matrix. Obtained by fixing all indices but one.
 
 / Slice: Analogue of a matrix obtained by fixing all indices but two.
@@ -31,7 +23,7 @@ $ chevron.l cal(A), cal(B) chevron.r = sum_(i_1) sum_(i_2) ... sum_(i_N) cal(A)_
 $ cal(X) = u_1 compose u_2 compose ... compose u_N $
 $quad quad$ Here $compose$ represents the outer product operation.
 
-- *Matricization/Unfolding*: _mode-n matricization_ of a tensor $ cal(X) in RR^(I_1 times I_2 ... times I_N)$ is matrix $cal(X)_((n))$ whose column-$i$ is the mode-$n$ fiber of the tensor. 
+- *Matricization/Unfolding*: _mode-n matricization_ of a tensor $ cal(X) in RR^(I_1 times I_2 ... times I_N)$ is matrix $cal(X)_((n))$ whose columns are mode-$n$ fiber of the tensor. 
 
 #line()
 
@@ -96,7 +88,8 @@ It is defined for only third order tensors whose last dimension is same. Result 
 
 
 
-#text(fill: green)[== Doubts]
+#text(fill: red)[== Doubts]
 
-+ Why is einsten product defined only for even order?
-+ Why transpose is defined only for even order tensors?
++ Why is Einstein product defined only for even order? #text(style: "italic")[Because it is ambiguous in the odd order case.]
+
++ How is transpose defined for a given product ($times$)? #text(style: "italic")[It is defined such that $(cal(A) times cal(B))^T = cal(B)^T times cal(A)^T$ holds true.]
