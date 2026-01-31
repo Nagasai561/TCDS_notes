@@ -8,5 +8,10 @@
 		stroke: stroke(color.green) 
 	)
 
+	show heading: it => {
+		it
+		v(0.5em)
+	}
+	
 	content
 }
